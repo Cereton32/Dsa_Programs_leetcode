@@ -2,8 +2,9 @@
 #include <string>
 using namespace std;
 
-    int main(){
-        if(1!=-1){
-            cout<<"abhishek is good her h";
-        }
-    }
+int main() {
+    int tempc= 12;
+    cout<<tempc++ <<"\n";
+    cout<<++tempc;
+    return 0;
+}
