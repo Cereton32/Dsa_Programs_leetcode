@@ -78,3 +78,31 @@ using namespace std;
   
 
 // }
+
+
+
+
+//------------------------example 4 check if array is sorted using recursion---------------------//
+bool isSorted(int arr[],int n){
+    if(n==0 || n==1) return true;
+    if(arr[0]>arr[1]) return false;
+    bool temp = isSorted(arr+1,n-1);
+    return temp;
+    
+}
+
+int main(){
+    int n;
+    cout<<"give the size of array  : \n ";
+    cin>>n;
+    
+    int arr[n];
+    for(int i=0;i<n;i++){
+        cout<<"\n"<<i <<"\t"<<"element of array is : \n ";
+        cin>>arr[i];
+    }
+    
+    if(isSorted(arr,n)) cout<<"\narray is sorted ";
+    else cout<<"array is not sorted";
+    
+}
